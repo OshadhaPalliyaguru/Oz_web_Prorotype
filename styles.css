@@ -1,0 +1,758 @@
+/* nav link Boostrap override css */
+.nav-link.custom-link {
+	color: black !important;
+	position: relative;
+	transition: color 0.3s ease-in;
+}
+
+.nav-link.custom-link::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	left: 0;
+	bottom: -5px;
+	background-color: red;
+	transition: width 0.3s ease-in;
+}
+
+.nav-link.custom-link:hover::after {
+	width: 100%;
+}
+
+/* nav link Boostrap override css */
+
+
+
+
+
+.hero-section {
+	padding: 50px 0;
+}
+
+.hero_txt {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+.smallfont h2,
+.smallfont2 h2 {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.mianTxt2 {
+	font-size: 4rem;
+	font-weight: bold;
+}
+
+.hero-img-container {
+	width: 100%;
+	max-width: 100%;
+	/* Adjust this as needed */
+	height: auto;
+}
+
+/* Hero text above */
+/* welcome tp oz hero text  */
+.welcome-container {
+	text-align: center;
+	margin: 2rem auto;
+}
+
+.welcome-container h1 {
+	font-size: clamp(2rem, 5vw, 3.5rem);
+	font-weight: bold;
+	margin: 0;
+}
+
+.welcome-container .oz {
+	color: red;
+}
+
+/* Animation for WELCOME TO OZ */
+.welcome-text {
+	display: inline-block;
+	opacity: 0;
+	transform: scale(0.8);
+	animation: fadeInScale 1s forwards;
+}
+
+/* Animation for STUDIOS letters one by one */
+.welcome-container .studios span {
+	opacity: 0;
+	display: inline-block;
+	transform: translateY(20px);
+	animation: fadeInUp 0.5s forwards;
+}
+
+.welcome-container .studios span:nth-child(1) {
+	animation-delay: 1.2s;
+}
+
+.welcome-container .studios span:nth-child(2) {
+	animation-delay: 1.4s;
+}
+
+.welcome-container .studios span:nth-child(3) {
+	animation-delay: 1.6s;
+}
+
+.welcome-container .studios span:nth-child(4) {
+	animation-delay: 1.8s;
+}
+
+.welcome-container .studios span:nth-child(5) {
+	animation-delay: 2s;
+}
+
+.welcome-container .studios span:nth-child(6) {
+	animation-delay: 2.2s;
+}
+
+.welcome-container .studios span:nth-child(7) {
+	animation-delay: 2.4s;
+}
+
+/* Keyframes */
+@keyframes fadeInScale {
+	0% {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+	.welcome-container h1 {
+		font-size: clamp(1.5rem, 6vw, 2.5rem);
+	}
+}
+
+/* welcome tp oz hero text  */
+
+#image-slider {
+	position: relative;
+	width: 100%;
+	padding-top: 100%;
+	/* Ensures a square aspect ratio */
+}
+
+.slider-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	/* Keeps image aspect ratio */
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.slider-img.active {
+	opacity: 1;
+}
+
+/* image slider */
+
+
+
+
+
+
+
+
+
+
+.section {
+	padding: 4rem 1rem;
+	text-align: center;
+}
+
+.section h2 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	color: #333;
+}
+
+.section p {
+	font-size: 1rem;
+	color: #666;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.bg-light {
+	background-color: #f9f9f9;
+}
+
+/* Responsive tweaks for smaller devices */
+@media (max-width: 768px) {
+	.section {
+		padding: 2rem 1rem;
+	}
+
+	.section h2 {
+		font-size: 1.5rem;
+	}
+
+	.section p {
+		font-size: 0.9rem;
+	}
+}
+
+
+
+
+
+
+
+
+/* Our Services Card */
+
+.wrap {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 85vmin;
+	height: 65vmin;
+	margin: 2rem auto;
+	border: 8px solid;
+	border-image: linear-gradient(-50deg,
+			red,
+			#b30000,
+			firebrick,
+			red,
+			lightcoral,
+			#e60000,
+			red) 1;
+	transition: 0.3s ease-in-out;
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+.overlay {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	padding: 1rem 0.75rem;
+	background: black;
+	transition: 0.4s ease-in-out;
+	z-index: 1;
+}
+
+.overlay-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 15vmin;
+	height: 100%;
+	padding: 0.5rem 0 0 0.5rem;
+	border: 3px solid;
+	border-image: linear-gradient(to bottom,
+			red 5%,
+			white 35% 65%,
+			red 95%) 0 0 0 100%;
+	transition: 0.3s ease-in-out 0.2s;
+	z-index: 1;
+}
+
+.image-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60vmin;
+	height: 100%;
+	background-image: url("img/Our_Services_Images/img\ 1.2.png");
+	background-size: cover;
+	transition: 0.3s ease-in-out;
+	/* border: 1px solid green; */
+}
+
+
+
+.image-content2 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60vmin;
+	height: 100%;
+	background-image: url("img/Our_Services_Images/img\ 2.png");
+	background-size: cover;
+	transition: 0.3s ease-in-out;
+	/* border: 1px solid green; */
+}
+
+
+
+.image-content3 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60vmin;
+	height: 100%;
+	background-image: url("img/Our_Services_Images/img\ 3.png");
+	background-size: cover;
+	transition: 0.3s ease-in-out;
+	/* border: 1px solid green; */
+}
+
+
+.inset {
+	max-width: 50%;
+	margin: 0.25em 1em 1em 0;
+	border-radius: 0.25em;
+	float: left;
+}
+
+.dots {
+	position: absolute;
+	bottom: 1rem;
+	right: 2rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 55px;
+	height: 4vmin;
+	transition: 0.3s ease-in-out 0.3s;
+}
+
+.dot {
+	width: 14px;
+	height: 14px;
+	background: red;
+	border: 1px solid indigo;
+	border-radius: 50%;
+	transition: 0.3s ease-in-out 0.3s;
+}
+
+.text {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60vmin;
+	height: 100%;
+	padding: 3vmin 4vmin;
+	background: #fff;
+	box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / 0.4);
+	overflow-y: scroll;
+}
+
+.wrap:hover .overlay {
+	transform: translateX(-60vmin);
+}
+
+.wrap:hover .image-content {
+	width: 30vmin;
+}
+
+.wrap:hover .image-content2 {
+	width: 30vmin;
+}
+
+.wrap:hover .image-content3 {
+	width: 30vmin;
+}
+
+.wrap:hover .overlay-content {
+	border: none;
+	transition-delay: 0.2s;
+	transform: translateX(60vmin);
+}
+
+.wrap:hover .dots {
+	transform: translateX(1rem);
+}
+
+.wrap:hover .dots .dot {
+	background: white;
+}
+
+/* Animations and timing delays */
+.animate {
+	animation-duration: 0.7s;
+	animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+	animation-fill-mode: backwards;
+}
+
+/* Pop In */
+.pop {
+	animation-name: pop;
+}
+
+@keyframes pop {
+	0% {
+		opacity: 0;
+		transform: scale(0.5, 0.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+
+/* Slide In */
+.slide {
+	animation-name: slide;
+}
+
+@keyframes slide {
+	0% {
+		opacity: 0;
+		transform: translate(4em, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+/* Slide Left */
+.slide-left {
+	animation-name: slide-left;
+}
+
+@keyframes slide-left {
+	0% {
+		opacity: 0;
+		transform: translate(-40px, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+.slide-up {
+	animation-name: slide-up;
+}
+
+@keyframes slide-up {
+	0% {
+		opacity: 0;
+		transform: translateY(3em);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.delay-1 {
+	animation-delay: 0.3s;
+}
+
+.delay-2 {
+	animation-delay: 0.6s;
+}
+
+.delay-3 {
+	animation-delay: 0.9s;
+}
+
+.delay-4 {
+	animation-delay: 1.2s;
+}
+
+.delay-5 {
+	animation-delay: 1.5s;
+}
+
+.delay-6 {
+	animation-delay: 1.8s;
+}
+
+.delay-7 {
+	animation-delay: 2.1s;
+}
+
+.delay-8 {
+	animation-delay: 2.4s;
+}
+
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+	.wrap {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: auto;
+		/* full screen width */
+		height: auto;
+		/* auto height to fit content */
+	}
+
+	.overlay {
+		flex-direction: column;
+		/* stack overlay content */
+		align-items: center;
+		padding: 0.5rem;
+		/* reduce padding */
+	}
+
+	.overlay-content {
+		display: flex;
+		/* ensure flex layout */
+		flex-direction: column;
+		align-items: center;
+		/* center children horizontally */
+		justify-content: center;
+		/* center children vertically */
+		width: 100%;
+		/* full width */
+		height: auto;
+		/* adjust height */
+		padding: 0.5rem;
+		/* reduce padding */
+		border: none;
+		/* remove border for simplicity */
+	}
+
+	.image-content,
+	.image-content2,
+	.image-content3 {
+		position: static;
+		/* remove absolute position */
+		width: 100%;
+		/* full width */
+		height: 40vmin;
+		/* smaller height for images */
+		background-size: cover;
+	}
+
+	.text {
+		position: static;
+		/* remove absolute position */
+		width: 100%;
+		/* full width */
+		height: auto;
+		/* adjust height */
+		padding: 1rem;
+		/* smaller padding */
+		box-shadow: none;
+		/* remove box-shadow for mobile */
+		overflow: visible;
+		/* let content flow normally */
+	}
+
+	.dots {
+		position: static;
+		/* remove absolute positioning */
+		margin-top: 1rem;
+		justify-content: center;
+		/* center dots */
+	}
+
+	.dot {
+		width: 10px;
+		/* smaller dot size */
+		height: 10px;
+	}
+
+	.wrap:hover .overlay,
+	.wrap:hover .image-content,
+	.wrap:hover .image-content2,
+	.wrap:hover .image-content3,
+	.wrap:hover .overlay-content,
+	.wrap:hover .dots {
+		/* Disable hover animations on mobile for better UX */
+		transform: none !important;
+		width: 100% !important;
+	}
+}
+
+/* End of responsive fixes */
+
+
+/* Our Services Card */
+
+
+/* our servise boostrap carousel */
+.carousel-caption {
+	position: static !important;
+	/* Remove absolute positioning */
+	background: none;
+	/* Transparent background */
+	color: #000;
+	/* Text color for better contrast */
+	text-align: center;
+	/* Center the text */
+	padding: 1rem;
+	display: block !important;
+	/* Force show at all sizes */
+}
+
+.carousel-indicators {
+	position: static !important;
+	/* Remove absolute positioning */
+	margin-bottom: 0.5rem;
+	/* Space between caption and indicators */
+	justify-content: center;
+	/* Center the indicators */
+}
+
+/* our servise  boostrap carousel */
+
+
+/* project section Carousel */
+.project-section {
+	text-align: center;
+	padding: 2rem 1rem;
+}
+
+.project-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin: 1rem 0 0.5rem;
+}
+
+.project-desc {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	color: #555;
+}
+
+.carousel-indicators {
+	position: static;
+	/* remove absolute positioning to put indicators on top */
+	margin-bottom: 1rem;
+}
+
+
+
+
+
+/* client review testomonials */
+.testimonial-slider {
+	width: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	height: 100px;
+	/* adjust as needed */
+}
+
+.testimonial-track {
+	display: flex;
+	width: calc((300px + 50px) * 18);
+	/* testimonial + margin */
+	animation: scroll 40s linear infinite;
+	/* double duration if doubled content */
+}
+
+.testimonial {
+	flex: 0 0 auto;
+	width: 300px;
+	/* adjust as needed */
+	margin-right: 50px;
+	/* adjust spacing */
+	text-align: center;
+}
+
+.review-text {
+	font-size: 1rem;
+	font-style: italic;
+}
+
+.stars {
+	color: gold;
+	font-size: 1.2rem;
+}
+
+.client {
+	font-weight: bold;
+	margin-top: 0.3rem;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+
+
+
+/* contact form css */
+
+.contact-form {
+	background: #ffffff;
+	border-radius: 15px;
+	padding: 30px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.form-control:focus {
+	border-color: #6610f2;
+	box-shadow: 0 0 5px rgba(102, 16, 242, 0.3);
+	transition: 0.3s;
+}
+
+.btn-animated {
+	position: relative;
+	overflow: hidden;
+	transition: color 0.4s;
+}
+
+.btn-animated::before {
+	content: '';
+	position: absolute;
+	left: -100%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(120deg, #6610f2, #6f42c1);
+	transition: all 0.4s;
+	z-index: 0;
+}
+
+.btn-animated:hover::before {
+	left: 0;
+}
+
+.btn-animated span {
+	position: relative;
+	z-index: 1;
+}
